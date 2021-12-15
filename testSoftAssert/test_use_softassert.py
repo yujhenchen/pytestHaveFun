@@ -1,7 +1,7 @@
 import pytest_check as check
 
 
-def test_fruits(*fruits):
+def test_use_softassert(*fruits):
     apple = "apple"
     orange = "orange"
 
@@ -14,4 +14,4 @@ def test_fruits(*fruits):
     check.equal(fruits[2], apple, "Third fruit should be " + apple)
 
 
-test_fruits("apple", "banana", "orange")
+test_use_softassert("apple", "banana", "orange")
