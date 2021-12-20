@@ -1,0 +1,3 @@
+pytest-check
+webdriver-manager
+selenium
