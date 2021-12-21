@@ -9,13 +9,13 @@ class EstimatesClient(object):
         super().__init__()
 
     def get_request_headers(apiKey):
-        return {'Authorization': "Bearer " + apiKey}
+        return {'Authorization': "Bearer " + apiKey, 'Content-Type': 'application/json'}
 
     def post_flight_estimates(apiKey, requestBody):
         response = requests.post(url=EstimatesClient.url + EstimatesClient.path,
                                  headers=EstimatesClient.get_request_headers(
                                      apiKey),
-                                 data=requestBody)
+                                 json=requestBody)
         responseJson = response.json()
         return response.status_code, responseJson
 
