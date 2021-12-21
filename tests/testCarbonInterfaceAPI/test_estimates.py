@@ -1,5 +1,5 @@
 import pytest_check as check
-from estimatesClient import EstimatesClient
+from estimates import EstimatesClient
 
 
 def test_post_flight_estimates(params):
