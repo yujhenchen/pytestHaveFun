@@ -2,3 +2,4 @@ pytest-check
 webdriver-manager
 selenium
 requests
+Appium-Python-Client
