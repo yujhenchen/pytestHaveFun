@@ -8,13 +8,13 @@ class EstimatesClient(object):
     def __init__(self):
         super().__init__()
 
-    def post_flight_estimates(params):
+    def post_flight_estimates(apiToken, params):
 
         return
 
-    def get_all_estimates(*querieargs):
+    def get_all_estimates(apiKey, *querieargs):
         getRequest = requests.get(
-            url=EstimatesClient.url + EstimatesClient.path)
+            url=EstimatesClient.url + EstimatesClient.path, headers={'Authorization': apiKey})
         response = getRequest.json()
         print(response)
         return
