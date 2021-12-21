@@ -11,16 +11,20 @@ class EstimatesClient(object):
     def get_request_headers(apiKey):
         return {'Authorization': "Bearer " + apiKey}
 
-    def post_flight_estimates(apiToken, params):
-
-        return
+    def post_flight_estimates(apiKey, requestBody):
+        response = requests.post(url=EstimatesClient.url + EstimatesClient.path,
+                                 headers=EstimatesClient.get_request_headers(
+                                     apiKey),
+                                 data=requestBody)
+        responseJson = response.json()
+        return response.status_code, responseJson
 
     def get_all_estimates(apiKey, *querieargs):
         response = requests.get(
             url=EstimatesClient.url + EstimatesClient.path, headers=EstimatesClient.get_request_headers(apiKey))
 
-        print("status code: " + str(response.status_code))
+        # print("status code: " + str(response.status_code))
         # print("response headers: "+str(response.headers))
         responseJson = response.json()
         # print(responseJson)
-        return responseJson
+        return response.status_code, responseJson
