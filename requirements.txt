@@ -4,3 +4,4 @@ selenium
 requests
 Appium-Python-Client
 pytest-xdist
+pytest-ordering
