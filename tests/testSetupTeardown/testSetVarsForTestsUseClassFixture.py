@@ -4,17 +4,23 @@ import pytest
 class TestClass(object):
     dataMap = {}
 
-    def setup_class(self, params):
-        self.dataMap["user"] = params['user']
-        self.dataMap["password"] = params['password']
+    @pytest.fixture(autouse=True)
+    def _request_params(self, params):
+        self.params = params
 
-    def teardown_class(self, params):
+    def setup_class(self):
+        print("setup_class")
+        self.dataMap["user"] = "admin"
+        self.dataMap["password"] = "123"
+
+    def teardown_class(self):
+        print("teardown_class")
         self.dataMap.clear()
 
-    def test_user(self, params):
+    def test_user(self):
         print("test_user")
-        assert self.dataMap["user"] == "admin"
+        assert self.dataMap["user"] == self.params['user']
 
-    def test_pwd(self, params):
+    def test_pwd(self):
         print("test_pwd")
-        assert self.dataMap["password"] == "123"
+        assert self.dataMap["password"] == self.params['password']
