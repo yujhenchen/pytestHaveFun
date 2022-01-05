@@ -6,12 +6,16 @@ class TestClass(object):
 
     @pytest.fixture(autouse=True)
     def _request_params(self, params):
+        print("_request_params")
         self.params = params
 
     def setup_class(self):
         print("setup_class")
         self.dataMap["user"] = "admin"
         self.dataMap["password"] = "123"
+
+        # print(self.params['user'])
+        # print(self.params['password'])
 
     def teardown_class(self):
         print("teardown_class")
