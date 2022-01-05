@@ -1,5 +1,5 @@
 import pytest_check as check
-from winapp.password_tool import PasswordTool
+from winapp.passwordTool import PasswordTool
 
 pwd = "XXX"
 
