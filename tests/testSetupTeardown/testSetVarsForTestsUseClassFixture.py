@@ -14,8 +14,9 @@ class TestClass(object):
         self.dataMap["user"] = "admin"
         self.dataMap["password"] = "123"
 
-        # print(self.params['user'])
-        # print(self.params['password'])
+        # This leads to ERROR because setup_class() is invoked earlier than _request_params()
+        print(self.params['user'])
+        print(self.params['password'])
 
     def teardown_class(self):
         print("teardown_class")
