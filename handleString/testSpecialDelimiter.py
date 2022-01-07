@@ -11,7 +11,7 @@ def data():
     return {"text": text, "keys": keys}
 
 
-def testSpecialDelimiter(data):
+def test_specialDelimiter(data):
     resultsMap = parse_string_by_keys(data["text"], data["keys"])
     for key in resultsMap:
         print(key + "_" + resultsMap[key])
