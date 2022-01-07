@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<builds count="5" href="/app/rest/builds?locator=buildType:ProjectBuildType,status:success,count:5" nextHref="/app/rest/builds?locator=buildType:ProjectBuildType,count:5,start:5,status:success">
+    <build id="7731" buildTypeId="ProjectBuildType" number="1.0.0.66" status="SUCCESS" state="finished" href="/app/rest/builds/id:7731" webUrl="https://my.teamcityserver.com/viewLog.html?buildId=7731&amp;buildTypeId=ProjectBuildType">
+        <finishOnAgentDate>20211117T072845+0000</finishOnAgentDate>
+    </build>
+    <build id="7685" buildTypeId="ProjectBuildType" number="1.0.0.65" status="SUCCESS" state="finished" href="/app/rest/builds/id:7685" webUrl="https://my.teamcityserver.com/viewLog.html?buildId=7685&amp;buildTypeId=ProjectBuildType">
+        <finishOnAgentDate>20211117T053457+0000</finishOnAgentDate>
+    </build>
+    <build id="7678" buildTypeId="ProjectBuildType" number="1.0.0.64" status="SUCCESS" state="finished" href="/app/rest/builds/id:7678" webUrl="https://my.teamcityserver.com/viewLog.html?buildId=7678&amp;buildTypeId=ProjectBuildType">
+        <finishOnAgentDate>20211117T030329+0000</finishOnAgentDate>
+    </build>
+    <build id="7600" buildTypeId="ProjectBuildType" number="1.0.0.63" status="SUCCESS" state="finished" href="/app/rest/builds/id:7600" webUrl="https://my.teamcityserver.com/viewLog.html?buildId=7600&amp;buildTypeId=ProjectBuildType">
+        <finishOnAgentDate>20211110T092243+0000</finishOnAgentDate>
+    </build>
+    <build id="7595" buildTypeId="ProjectBuildType" number="1.0.0.62" status="SUCCESS" state="finished" href="/app/rest/builds/id:7595" webUrl="https://my.teamcityserver.com/viewLog.html?buildId=7595&amp;buildTypeId=ProjectBuildType">
+        <finishOnAgentDate>20211110T070053+0000</finishOnAgentDate>
+    </build>
+</builds>
